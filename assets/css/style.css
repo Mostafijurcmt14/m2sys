@@ -10,10 +10,11 @@ body{
 
 }
 p{
-    font-family: 'Poppins', sans-serif;
-	font-size: 16px;
-    line-height: 24px;
-    color: #8a919c;
+font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #4f4f58;
 }
 a{
     font-family: 'Poppins', sans-serif;
@@ -110,11 +111,17 @@ h1, h2, h3, h4, h5, h6{
 .pt-130{
     padding-top: 130px;
 }
-
+.common-icon{
+        width: 75px;
+    margin-bottom: 16px;
+}
 
 /*====== Header Style ========*/
 .logged-in .header {
     top: 32px;
+}
+.logged-in.customize-partial-edit-shortcuts-shown .header {
+    top: 0px;
 }
 .header {
     position: fixed;
@@ -135,6 +142,9 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+}
+.header .logo-column{
+    padding: 0px
 }
 .header .header-area .logo img{
 	width:160px;
@@ -236,8 +246,8 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
 }
 .header .menu ul li{
-    margin:5px 0px;
-    padding: 5px 0px;
+    margin:6px 0px;
+    padding: 6px 0px;
 }
 .header .menu ul li a{
     font-size: 22px;
@@ -252,7 +262,26 @@ h1, h2, h3, h4, h5, h6{
 .header .menu ul li a:hover{
     color:#a81010;
 }
-
+.header .menu-column{
+    position: relative;
+}
+.header .menu-column .button{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header .menu-column .button a{
+    padding: 12px 20px;
+    background-color: #5F2DEE;
+    border-color: #5F2DEE;
+    line-height: 20px;
+}
+.header .menu-column .button a:hover{
+    background-color: #a81010;
+        border-color: #a81010;
+        color: #ffffff;
+}
 /*===== Home page style =====*/
 .m2sys-hero-section{
 	background: url(../images/banner-bg.png);
@@ -284,8 +313,8 @@ h1, h2, h3, h4, h5, h6{
 	color: #6c63ff;
 }
 .m2sys-hero-section .heading{
-	font-size: 50px;
-	line-height: 60px;
+    font-size: 48px;
+    line-height: 50px;
     font-weight: 700;
 }
 .m2sys-hero-section .heading .top{
@@ -311,8 +340,9 @@ h1, h2, h3, h4, h5, h6{
     margin: 42px 0px 50px 0px;
 }
 .m2sys-hero-section .content-text h3{
-	font-size: 20px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4f4f58;
 }
 .m2sys-hero-section .m2sys-image img{
 	width: 100%;
@@ -375,17 +405,18 @@ h1, h2, h3, h4, h5, h6{
 .m2sys-agencie-section .sub-heading{
     font-size: 20px;
     text-transform: uppercase;
-    color: #c0c0c9;
+    color: #4f4f58;
     letter-spacing: 1.5px;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
 }
 .m2sys-agencie-section .sub-heading span{
 	color: #6c63ff;
 }
 .m2sys-agencie-section .heading{
-    font-size: 46px;
-    line-height: 56px;
+    font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
+    margin-bottom: 33px;
 }
 .m2sys-agencie-section .heading .top{
 	display: inline-block;
@@ -406,11 +437,11 @@ h1, h2, h3, h4, h5, h6{
 	display: block;
 }
 .m2sys-agencie-section .content-text{
-    margin: 35px 0px 50px 0px;
+    margin: 40px 0px 0px 0px;
 }
 .m2sys-agencie-section .content-text p{
-	font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
 }
 .m2sys-agencie-section .m2sys-image img{
 	width: 100%;
@@ -434,7 +465,7 @@ h1, h2, h3, h4, h5, h6{
 .m2sys-agencie-section .list-items .text{
 	font-size: 20px;
 	line-height: 28px;
-    color: #8a919c;
+    color: #4f4f58;
 }
 
 
@@ -445,14 +476,15 @@ h1, h2, h3, h4, h5, h6{
 .m2sys-about-section .sub-heading{
     font-size: 20px;
     text-transform: uppercase;
-    color: #c0c0c9;
+    color: #4f4f58;
     letter-spacing: 1.5px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 .m2sys-about-section .heading{
-	font-size: 36px;
-    line-height: 44px;
+    font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
+    margin-bottom: 42px;
 }
 .m2sys-about-section .heading span{
 	display: inline-block;
@@ -471,7 +503,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .m2sys-about-section .content-text{
 	max-width: 550px;
-    margin: 35px 0px 40px 0px;
+    margin: 35px 0px 50px 0px;
 }
 
 .m2sys-about-section .image-column{
@@ -542,11 +574,13 @@ h1, h2, h3, h4, h5, h6{
 	margin-right: 20px;
 }
 .m2sys-cards-section .card-content h3{
-	font-size: 24px;
-	font-weight: 500;
-	padding-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 12px;
 }
 .m2sys-cards-section .card-content p{
+    font-size: 16px;
+    line-height: 24px;
 	margin:0;
 }
 
@@ -565,7 +599,7 @@ h1, h2, h3, h4, h5, h6{
     box-shadow: 0px 30px 70px 0px rgb(223 227 234 / 50%);
 }
 .m2sys-egov-section .section-heading{
-    max-width: 630px;
+    max-width: 800px;
     margin: 0 auto;
     margin-bottom: 80px;
     text-align: center;
@@ -578,9 +612,10 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom: 10px;
 }
 .m2sys-egov-section .heading{
-    font-size: 46px;
-    line-height: 56px;
+font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
+    margin-bottom: 42px;
 }
 .m2sys-egov-section .heading span{
 	display: inline-block;
@@ -598,12 +633,17 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 5px;
 }
 .m2sys-egov-section .lists li{
-	font-size: 20px;
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
-.m2sys-egov-section .lists span{
+.m2sys-egov-section .lists .image{
 	margin-right: 12px;
+}
+.m2sys-egov-section .lists .text{
+    margin-right: 0px;
 }
 .m2sys-egov-section .lists img{
 	width: 30px;
@@ -625,10 +665,10 @@ h1, h2, h3, h4, h5, h6{
 	padding: 150px 0;
 }
 .m2sys-services-section .heading {
-    font-size: 46px;
-    line-height: 56px;
+    font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
-        margin-bottom: 40px;
+    margin-bottom: 42px;
 }
 .m2sys-services-section .heading span{
 	display: inline-block;
@@ -659,7 +699,7 @@ h1, h2, h3, h4, h5, h6{
 	display: flex;
     align-items: center;
 }
-.m2sys-services-section .service-item, .m2sys-client-section .client-item, .m2sys-blog-section .blog-item {
+.m2sys-services-section .service-item{
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -678,14 +718,21 @@ h1, h2, h3, h4, h5, h6{
     right: 0;
     top: 0;
 }
-.m2sys-services-section .service-item h4, .m2sys-client-section .client-item h4, .m2sys-blog-section .blog-item h4{
-	font-size: 24px;
-    font-weight: 500;
+.m2sys-services-section .service-item img{
+    width:64px;
+}
+.m2sys-services-section .service-item h4{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
     padding: 16px 0; 
 }
-.m2sys-services-section .service-item p, .m2sys-client-section .client-item p, .m2sys-blog-section .blog-item p{
+.m2sys-services-section .service-item p{
+        font-size: 16px;
+    line-height: 24px;
 	margin-bottom: 0;
 }
+
 
 
 
@@ -723,11 +770,11 @@ background-image: linear-gradient(to right bottom, #1d0959, #280f71, #33158a, #3
     margin: 0 auto;
 }
 .m2sys-deploy-section .text-column .heading{
-    font-size: 36px;
-    line-height: 44px;
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
-	color: #ffffff;
-	margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 .m2sys-deploy-section .main-btn.red:hover {
     background: transparent;
@@ -760,11 +807,13 @@ background-image: linear-gradient(to right bottom, #1d0959, #280f71, #33158a, #3
 	z-index: 999;
 }
 .m2sys-cases-section .text-column .heading{
-	color: #ffffff;
-	    font-size: 46px;
-    line-height: 56px;
+    max-width: 700px;
+    margin:0 auto;
+        color: #ffffff;
+    font-size: 34px;
+    line-height: 38px;
     font-weight: 700;
-    margin-bottom: 60px;
+     margin-bottom: 50px;
     	text-align: center;
 }
 .m2sys-cases-section .text-column ul{
@@ -780,7 +829,7 @@ background-image: linear-gradient(to right bottom, #1d0959, #280f71, #33158a, #3
 .m2sys-cases-section .text-column ul li p{
 color: #ffffff;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 28px;
     margin-bottom: 0;
 }
 .m2sys-cases-section .text-column ul li img{
@@ -788,7 +837,10 @@ color: #ffffff;
 	filter: brightness(0) invert(1);
 	    margin-right: 18px;
 }
-.slick-dots li {
+
+
+
+.m2sys-client-section .slick-dots li {
     position: relative;
     display: inline-block;
     width: 10px;
@@ -799,7 +851,275 @@ color: #ffffff;
     border-radius: 50%;
     border: 1px solid gray;
 }
-.slick-dots li.slick-active {
+.m2sys-client-section .slick-dots li.slick-active {
     background-color: red;
     border-color: red;
+}
+.m2sys-client-section .heading {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+}
+.m2sys-client-section .slick-track{
+    display: flex;
+    align-items: center;
+}
+.m2sys-client-section .slick-slide{
+        background: #ffffff;
+    margin: 60px 20px;
+    transition: 0.3s;
+}
+.m2sys-client-section .client-item{
+    padding: 30px;
+    box-shadow: 0px 0px 15px 0px rgb(217 217 217 / 66%);
+    background: #ffffff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.m2sys-client-section .slick-current.slick-active.slick-center .client-item{
+    background: #5f2dee;
+    color: #ffffff;
+}
+.m2sys-client-section .slick-current.slick-active.slick-center .client-item span{
+    color: #ffffff;
+}
+.m2sys-client-section .slick-current.slick-active.slick-center .client-item p{
+    color: #ffffff;
+}
+.m2sys-client-section .client-item .icon {
+    margin-bottom: 20px;
+}
+.m2sys-client-section .slick-current.slick-active.slick-center{
+    position: relative;
+    transform: scale(1.3);
+    background: #ffffff;
+        opacity: 1;
+    z-index: 999;
+}
+.m2sys-client-section .slick-slide img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.m2sys-client-section .client-item h4{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 6px;
+}
+.m2sys-client-section .client-content h5{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.m2sys-client-section .client-content span{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #a81010;
+}
+.m2sys-client-section .client-content p{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.m2sys-client-section .slick-dots {
+    bottom: -50px;
+}
+
+
+.m2sys-blog-section .container{
+    padding: 50px 0px 150px 0;
+}
+.m2sys-blog-section .heading {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 700px;
+}
+.m2sys-blog-section .item-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.m2sys-blog-section .item-box{
+    width: 31%;
+    background:#ffffff;
+    box-shadow: 0px 0px 20px 0px #9390bb5e;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 1%;
+    transition: 0.3s;
+}
+.m2sys-blog-section .item-box:hover{
+    background:#a81010;
+    color: #ffffff;
+}
+.m2sys-blog-section .blog-content{
+    text-align: center;
+}
+.m2sys-blog-section .blog-content img{
+    margin-bottom: 12px;
+}
+.m2sys-blog-section .blog-content h4{
+    font-size:20px;
+    font-weight: 600;
+}
+.m2sys-blog-section .item-box:hover img{
+    filter: brightness(0) invert(1);
+}
+.m2sys-blog-section .blog-conten h4{
+    font-size: 24px;
+    font-weight: 500;
+    transition: 0s;
+}
+.m2sys-blog-section .item-box:hover p{
+    color: #ffffff;
+}
+
+
+.m2sys-looking-section{
+    overflow: hidden;
+}
+.m2sys-looking-section .looging-row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.m2sys-looking-section .image-column{
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+.m2sys-looking-section .text-column{
+    padding: 100px 70px;
+    background: #5f2dee;
+    color: #ffffff;
+}
+.m2sys-looking-section .text-column .inner-text{
+    max-width: 700px;
+}
+.m2sys-looking-section .text-column .heading {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.m2sys-looking-section .text-column .heading-below{
+    font-size: 20px;
+    line-height: 28px;
+}
+.m2sys-looking-section .text-column .lists{
+    margin-top: 50px;
+}
+.m2sys-looking-section .text-column .lists ul{
+    padding: 0px;
+}
+.m2sys-looking-section .text-column .lists li{
+    display: flex;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.m2sys-looking-section .text-column .image {
+    margin-right: 12px;
+}
+.m2sys-looking-section .text-column .image img {
+    width: 30px;
+    filter: brightness(0) invert(1);
+}
+.m2sys-looking-section .text-column .text {
+    margin-right: 0px;
+}
+
+
+.contact-section{
+    overflow: hidden;
+}
+.contact-section .container{
+    padding: 150px 0px;
+}
+.contact-section .form-column{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 60px;
+    box-shadow: 0 20px 48px 0 rgb(153 161 170 / 25%);
+    border-radius: 20px;
+}
+.contact-section .form-column .heading{
+        font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-section .two-field{
+    display: flex;
+}
+.contact-section .two-field .form-group{
+    width: 50%;
+}
+.contact-section .form-group{
+    margin-bottom: 20px;
+}
+.contact-section .two-field .first{
+    margin-right: 25px;
+}
+.contact-section .form-control{
+     display: block;
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 10px !important;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.contact-section .form-control:hover{
+    border: 1px solid rgb(95 45 238 / 36%);
+}
+.contact-section .form-control:focus{
+    border: 1px solid rgb(95 45 238 / 36%);
+}
+.contact-section .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.contact-section .submit{
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+
+
+.m2sys-footer-section{
+    background: #1d2327;
+    text-align: center;
+    color: #ffffff;
+}
+.m2sys-footer-section .container{
+    padding: 30px 0px;
+}
+.m2sys-footer-section .copyright p{
+    font-size:16px;
+    line-height: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+.m2sys-footer-section .copyright p a{
+    color: #eb3b3b;
+    transition: 0.3s;
+}
+.m2sys-footer-section .copyright p a:hover{
+    color: #5f2dee;
 }

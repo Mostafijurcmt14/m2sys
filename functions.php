@@ -26,6 +26,7 @@ function m2sys_assets(){
     wp_enqueue_style( "m2sys-slick-css", get_theme_file_uri( "/assets/css/slick.css" ), null,);
     wp_enqueue_style( "m2sys-slick-theme-css", get_theme_file_uri( "/assets/css/slick-theme.min.css" ), null, );
     wp_enqueue_style( "m2sys-fontawesome-css", get_theme_file_uri( "/assets/css/fontawesome.min.css" ), null, );
+    wp_enqueue_style( "m2sys-fontawesome-min-css", get_theme_file_uri( "/assets/css/all.min.css" ), null, );
     wp_enqueue_style( "m2sys-bootstrap-css", get_theme_file_uri( "/assets/css/bootstrap.min.css" ), null, );
     wp_enqueue_style( "m2sys-style-css", get_theme_file_uri( "/assets/css/style.css" ), null, );
     wp_enqueue_style( "m2sys-css", get_stylesheet_uri() );
@@ -48,4 +49,9 @@ require_once(get_template_directory().'/inc/activation-tgm.php');
 /*
 * m2sys theme kirki plugin
 */
-require_once(get_template_directory().'/inc/kirki.php');
+if(in_array('kirki/kirki.php', apply_filters('active_plugins', get_option('active_plugins')))){ 
+   require_once(get_template_directory().'/inc/kirki.php');  
+}
+
+
+  

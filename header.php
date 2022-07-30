@@ -16,12 +16,32 @@
     <div class="header-area py-4">
       <div class="container">
         <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-3 col-3">
-            <?php $logo = get_theme_mod( 'm2sys_logo_setting_id'); ?>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-3 logo-column">
+           
 
-            <div class="logo"><img src="<?php echo esc_url( $logo['url'] ); ?>"></div>
+            <div class="logo">
+              <!-- <?php
+              $logo = get_theme_mod( 'm2sys_logo_setting_id');
+                  if($logo){
+                    ?>
+                    <a href="<?php $url = home_url();
+echo $url; ?>"><img src="<?php echo $logo['url'] ?>"></a>
+                    <?php
+                  }else{
+                    ?>
+                      <a href="<?php $url = home_url();
+echo $url; ?>"><img src="<?php echo get_template_directory_uri();?>/assets/images/logo.svg"></a>
+                    <?php
+                  }
+                ?>
+ -->
+              
+            </div>
           </div>
-          <div class="col-xl-9 col-lg-9 col-md-9 col-9">
+          <div class="col-xl-9 col-lg-9 col-md-9 col-9 menu-column">
+            <div class="button">
+              <a class="main-btn one red" href="#contact">FREE CONSULTATION    </a>
+            </div>
             <nav class="menu flex-menu" id="menu">
               <div class="menu-flex">
     

@@ -5,6 +5,7 @@ $('.slider-active').slick({
     slidesToShow: 3,
     arrows: false,
     dots : true,
+    touchThreshold: 6000,
     responsive: [
       {
         breakpoint: 768,
