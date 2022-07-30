@@ -20,7 +20,7 @@
            
 
             <div class="logo">
-              <!-- <?php
+             <?php
               $logo = get_theme_mod( 'm2sys_logo_setting_id');
                   if($logo){
                     ?>
@@ -34,7 +34,7 @@ echo $url; ?>"><img src="<?php echo get_template_directory_uri();?>/assets/image
                     <?php
                   }
                 ?>
- -->
+
               
             </div>
           </div>

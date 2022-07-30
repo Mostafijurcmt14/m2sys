@@ -370,7 +370,7 @@
 
             </ul>
           </div>
-          <div class="cal image-column">
+          <div class="col image-column">
             <?php
             $egov_law_management_image = get_theme_mod( 'egov_law_management_image');
                   if($egov_law_management_image){
@@ -422,8 +422,8 @@
   <section>
     <div class="m2sys-services-section">
       <div class="container">
-        <div class="row row-cols-2 d-flex align-items-center">
-          <div class="cal items-column">
+        <div class="row row-cols-2 d-flex align-items-center main-row">
+          <div class="col items-column">
             <div class="row">
 
 
@@ -544,7 +544,7 @@
               </div>
             </div>
           </div>
-          <div class="cal text-column">
+          <div class="col text-column">
             <h2 class="heading"><?php
              $why_egov_heading = get_theme_mod( 'why_egov_heading');
              if($why_egov_heading){
@@ -855,7 +855,7 @@
       <div class="container">
         <div class="row">
           <div class="form-column">
-            <div class="contact-form-box shadow-box mb--30">
+            <div class="contact-form-box">
             <h3 class="heading">Get a free quote now</h3>
             <form method="POST" action="#">
               <div class="two-field">
