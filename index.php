@@ -724,13 +724,6 @@
                 <p>
                   <?php echo $success_stories_item['use']; ?>
                 </p>
-                <div class="review mt-2">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                </div>
               </div>
             </div>
           </div>
@@ -814,33 +807,45 @@
   <section>
     <div class="m2sys-looking-section">
       <div class="row looging-row">
-        <div class="col image-column" style="background: url(<?php echo get_template_directory_uri();?>/assets/images/looking.jpg);"></div>
+          <div class="col image-column" style="background:url('<?php echo get_template_directory_uri();?>/assets/images/looking.jpg')"></div>
+
+
         <div class="col text-column">
           <div class="inner-text">
-          <h3 class="heading">Looking for More Than a Law Enforcement Management System?</h3>
-          <h4 class="heading-below">M2SYS eGov Also Provides End-to-End Solutions for Government ID Projects</h4>
+          <h3 class="heading">
+            <?php
+             $m2sys_looking_heading = get_theme_mod( 'm2sys_looking_heading');
+             if($m2sys_looking_heading){
+                echo $m2sys_looking_heading;
+             }else{
+              echo 'Looking for More Than a Law Enforcement Management System?';
+             }
+             ?>
+          </h3>
+          <h4 class="heading-below">
+          <?php
+             $m2sys_looking_content = get_theme_mod( 'm2sys_looking_content');
+             if($m2sys_looking_content){
+                echo $m2sys_looking_content;
+             }else{
+              echo 'M2SYS eGov Also Provides End-to-End Solutions for Government ID Projects';
+             }
+             ?>
+          </h4>
           <div class="lists">
             <ul>
               
+              <?php
+                $m2sys_looking_repeater = get_theme_mod( 'm2sys_looking_repeater');
+                foreach ($m2sys_looking_repeater as $m2sys_looking_item) :
+              ?>
               <li>
                 <span class="image">
-                  <img src="http://localhost/demo/wp-content/themes/m2sys/assets/images/checkmark.png">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/checkmark.png">
                 </span>
-                <span class="text">Biometric Capture Tool</span>
+                <span class="text"><?php echo $m2sys_looking_item['list_heading']; ?></span>
               </li>
-              <li>
-                <span class="image">
-                  <img src="http://localhost/demo/wp-content/themes/m2sys/assets/images/checkmark.png">
-                </span>
-                <span class="text">eGov Platform</span>
-              </li>
-              <li>
-                <span class="image">
-                  <img src="http://localhost/demo/wp-content/themes/m2sys/assets/images/checkmark.png">
-                </span>
-                <span class="text">Biometric Matching Service</span>
-              </li>
-
+            <?php endforeach; ?>
             </ul>
           </div>
         </div>
@@ -856,7 +861,14 @@
         <div class="row">
           <div class="form-column">
             <div class="contact-form-box">
-            <h3 class="heading">Get a free quote now</h3>
+            <h3 class="heading"><?php
+             $m2sys_get_quote_content = get_theme_mod( 'm2sys_get_quote_content');
+             if($m2sys_get_quote_content){
+                echo $m2sys_get_quote_content;
+             }else{
+              echo 'Get a free quote now';
+             }
+             ?></h3>
             <form method="POST" action="#">
               <div class="two-field">
                 <div class="form-group first">
@@ -891,7 +903,14 @@
 <section>
   <div class="m2sys-footer-section">
     <div class="container">
-      <div class="copyright"><p>© 2022. All rights reserved by <a href="https://www.m2sys.com/">M2SYS</a></p></div>
+      <div class="copyright"><p><?php
+             $m2sys_footer_content = get_theme_mod( 'm2sys_footer_content');
+             if($m2sys_footer_content){
+                echo $m2sys_footer_content;
+             }else{
+              echo '© 2022. All rights reserved by <a href="https://www.m2sys.com/">M2SYS</a>';
+             }
+             ?></p></div>
     </div>
   </div>
 </section>

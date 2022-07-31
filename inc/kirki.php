@@ -889,3 +889,105 @@ Kirki::add_field( 'm2sys_config_id', [
 		
 	]
 ] );
+
+
+
+
+// Looking section customizer 
+Kirki::add_section( 'm2sys_looking_id', array(
+    'title'          => esc_html__( 'Looking law section', 'm2sys' ),
+    'description'    => esc_html__( 'Change looking law section area content.', 'm2sys' ),
+    'priority'       => 20,
+) );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'        => 'image',
+	'settings'    => 'm2sys_looking_image',
+	'label'       => esc_html__( 'Image', 'm2sys' ),
+	'section'     => 'm2sys_looking_id',
+	'default'     => '',
+	'choices'     => [
+		'save_as' => 'array',
+	],
+	'priority' => 10,
+] );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'     => 'text',
+	'settings' => 'm2sys_looking_heading',
+	'label'    => esc_html__( 'Heading', 'm2sys' ),
+	'section'  => 'm2sys_looking_id',
+	'default'  => esc_html__( 'Looking for More Than a Law Enforcement Management System?', 'm2sys' ),
+	'priority' => 10,
+] );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'     => 'textarea',
+	'settings' => 'm2sys_looking_content',
+	'label'    => esc_html__( 'Content', 'm2sys' ),
+	'section'  => 'm2sys_looking_id',
+	'default'  => esc_html__( 'M2SYS eGov Also Provides End-to-End Solutions for Government ID Projects', 'm2sys' ),
+	'priority' => 10,
+] );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'        => 'repeater',
+	'label'       => esc_html__( 'Content list items', 'm2sys' ),
+	'section'     => 'm2sys_looking_id',
+	'priority'    => 10,
+	'row_label' => [
+		'type'  => 'text',
+		'value' => esc_html__( 'Content list item', 'm2sys' ),
+	],
+	'button_label' => esc_html__('"Add new" button label (optional) ', 'm2sys' ),
+	'settings'     => 'm2sys_looking_repeater',
+	'default'      => [
+		[
+			'list_heading' => esc_html__( 'Biometric Capture Tool', 'm2sys' ),
+		],
+		[
+			'list_heading' => esc_html__( 'eGov Platform', 'm2sys' ),
+		],
+		[
+			'list_heading' => esc_html__( 'Biometric Matching Service', 'm2sys' ),
+		],
+	],
+	'fields' => [
+		'list_heading' => [
+			'type'        => 'text',
+			'label'       => esc_html__( 'Text', 'm2sys' ),
+			'default'     => '',
+		],
+	]
+] );
+
+
+
+
+// Get a free quote section customizer 
+Kirki::add_section( 'm2sys_get_quote_id', array(
+    'title'          => esc_html__( 'Form section', 'm2sys' ),
+    'description'    => esc_html__( 'Change get quote section area content.', 'm2sys' ),
+    'priority'       => 20,
+) );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'     => 'text',
+	'settings' => 'm2sys_get_quote_content',
+	'label'    => esc_html__( ' Get a free quote', 'm2sys' ),
+	'section'  => 'm2sys_get_quote_id',
+	'default'  => esc_html__( 'Get a free quote now', 'm2sys' ),
+	'priority' => 10,
+] );
+
+
+
+// Footer section customizer 
+Kirki::add_section( 'm2sys_footer_id', array(
+    'title'          => esc_html__( 'Footer', 'm2sys' ),
+    'description'    => esc_html__( 'Change footer section area content.', 'm2sys' ),
+    'priority'       => 20,
+) );
+Kirki::add_field( 'm2sys_config_id', [
+	'type'     => 'textarea',
+	'settings' => 'm2sys_footer_content',
+	'label'    => esc_html__( 'Copyright text', 'm2sys' ),
+	'section'  => 'm2sys_footer_id',
+	'default'  => esc_html__( '© 2022. All rights reserved by <a href="https://www.m2sys.com/">M2SYS</a>', 'm2sys' ),
+	'priority' => 10,
+] );

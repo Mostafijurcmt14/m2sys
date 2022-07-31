@@ -265,6 +265,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .header .menu-column{
     position: relative;
+        padding: 0;
 }
 .header .menu-column .button{
     position: absolute;
@@ -818,9 +819,12 @@ background-image: linear-gradient(to right bottom, #1d0959, #280f71, #33158a, #3
 
 .m2sys-cases-section{
 	background-image: url(../images/tim-gouw-bwki71ap-y8-unsplash.jpg);
-	position: relative;
-	margin-top: 150px;
-        overflow: hidden;
+    position: relative;
+    margin-top: 150px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .m2sys-cases-section::before{
     content: '';
@@ -935,7 +939,7 @@ color: #ffffff;
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
 }
 .m2sys-client-section .client-content h5{
     font-size: 16px;
@@ -1183,11 +1187,6 @@ color: #ffffff;
 
 
 @media only screen and (max-width: 1366px) {
-    .container, .container-sm {
-        max-width: 100% !important;
-        padding-left: 50px !important;
-        padding-right: 50px !important;
-    }
     .m2sys-hero-section{
         background-size: 140%;
     }
@@ -1206,6 +1205,14 @@ color: #ffffff;
 }
 }
 
+
+@media only screen and (max-width: 1170px) {
+    .container, .container-sm {
+        max-width: 100% !important;
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+}
 
 @media only screen and (max-width: 1100px) {
     .main-btn.one {
